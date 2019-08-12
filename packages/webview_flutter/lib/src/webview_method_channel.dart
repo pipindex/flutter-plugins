@@ -103,7 +103,7 @@ class MethodChannelWebViewPlatform implements WebViewPlatformController {
         'removeJavascriptChannels', javascriptChannelNames.toList());
   }
 
-  /// Method channel implementation for [WebViewPlatform.clearCookies].
+  /// Method channel mplementation for [WebViewPlatform.clearCookies].
   static Future<bool> clearCookies() {
     return _cookieManagerChannel
         .invokeMethod<bool>('clearCookies')
@@ -135,7 +135,6 @@ class MethodChannelWebViewPlatform implements WebViewPlatformController {
       'initialUrl': creationParams.initialUrl,
       'settings': _webSettingsToMap(creationParams.webSettings),
       'javascriptChannelNames': creationParams.javascriptChannelNames.toList(),
-      'autoMediaPlaybackPolicy': creationParams.autoMediaPlaybackPolicy.index,
     };
   }
 }
